@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:29:31 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/23 23:31:06 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:35:16 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class PhoneBook
 {
 	private:
-		Contact contacts_[8];
+		Contact	contacts_[8];
 	public:
 		void	addContact(void);
 		void	searchContact(void);
