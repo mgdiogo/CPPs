@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:55:02 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/23 22:13:52 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:02:48 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,25 @@
 
 int	main(int argc, char **argv)
 {
-	int 	i;
-	char	*str;
-	
+	int i;
+	int j;
+
 	i = 0;
-	str = argv[1];
-	if (argc == 2)
+	if (argc > 1)
 	{
-		while (argv && str[i])
+		while (argv[++i])
 		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-				str[i] = (char)toupper(str[i]);
-			else if (str[i] >= 'A' && str[i] <= 'Z')
-				str[i] = (char)tolower(str[i]);
-			i++;
+			j = -1;
+			while (argv[i][++j])
+			{
+				argv[i][j] = toupper(argv[i][j]);
+				std::cout << argv[i][j];
+			}
+			std::cout << " ";
 		}
-		std::cout << str << std::endl;
+		std::cout << "\n";
 	}
 	else
-		std::cout << "Invalid arguments!" << std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	return (0);
 }
