@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:35 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 14:18:01 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 14:23:46 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,3 @@ void	PhoneBook::displayContact(Contact contact)
 			  << "\nPhone number: " << contact.getPhoneNumber() << std::endl;
 	std::cout << "\n";
 }
-
-/*
-	
-*/
