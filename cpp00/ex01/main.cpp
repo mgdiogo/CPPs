@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:40:08 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 13:26:40 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:00:26 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	main(void)
 	{
 		phone_book.displayMenu();
 		std::cout << "PhoneBook -> ";
-		std::cin >> action;
+		if (!std::getline(std::cin, action))
+			return (0);
 		std::cout << "\n";
 		if (action == "ADD")
 			phone_book.addContact();

@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:35 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 14:23:46 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 14:57:43 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Contact	PhoneBook::createContact(int i)
 	std::string	darkest_secret;
 
 	std::cout << BLUE << "Adding a new contact!\n" << CLEAR << std::endl;
-	std::cin.ignore();
 	std::cout << "Enter your first name -> ";
 	std::getline(std::cin, first_name);
 	std::cout << "Enter your last name -> ";
@@ -60,6 +59,7 @@ Contact	PhoneBook::createContact(int i)
 		std::cin >> phone_number;
 	}
 	std::cout << "\n";
+	std::cin.ignore();
 	Contact contact(i, phone_number, first_name, last_name, nickname, darkest_secret);
 	return (contact);
 }
@@ -95,7 +95,10 @@ void	PhoneBook::searchContact(void)
 		searchContact();
 	}
 	else
+	{
+		std::cin.ignore();
 		displayContact(this->contacts_[index]);
+	}
 }
 
 void	PhoneBook::displayContacts(void)
