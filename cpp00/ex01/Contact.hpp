@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:42 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 18:18:08 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 20:02:28 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include <limits>
 #include <iomanip>
 #include <string>
+#include <cstdlib>
+#include <sstream>
 #include <cctype>
 
 class Contact

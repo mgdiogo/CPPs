@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:29:31 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 17:36:32 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 19:55:10 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class PhoneBook
 		void			formatContacts(Contact contact);
 		void			fixMsg(std::string msg);
 		void			createContact(int i);
+		int				check_index(std::string input);
 };
 
 #endif

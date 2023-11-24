@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:35 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 18:41:11 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 20:15:59 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	PhoneBook::displayMenu(void)
 
 void	PhoneBook::searchContact(void)
 {
-	int	index;
+	int					index;
+	std::string			s_index;
 	
 	if (this->contacts_[0].getId() == -1)
 	{
@@ -52,16 +53,16 @@ void	PhoneBook::searchContact(void)
 	}
 	displayContacts();
 	std::cout << "Choose an index -> ";
-	std::cin >> index;
-	while (std::cin.fail())
+	std::getline(std::cin, s_index);
+	while (s_index.empty() || check_index(s_index))
 	{
+		if (!std::cin.eof())
+			std::cout << RED "Enter a valid index -> " << CLEAR;
+		std::getline(std::cin, s_index);
 		if (std::cin.eof())
 			return ;
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << RED << "Enter a valid index -> " << CLEAR;
-		std::cin >> index;
 	}
+	index = std::atoi(s_index.c_str());
 	std::cout << "\n";
 	if (index > 7 || index < 0)
 	{
@@ -74,10 +75,7 @@ void	PhoneBook::searchContact(void)
 		searchContact();
 	}
 	else
-	{
-		std::cin.ignore();
 		displayContact(this->contacts_[index]);
-	}
 }
 
 void	PhoneBook::displayContacts(void)
@@ -147,4 +145,17 @@ void	PhoneBook::displayContact(Contact contact)
 			  << "\nDarkest secret: " << contact.getDarkestSecret()
 			  << "\nPhone number: " << contact.getPhoneNumber() << std::endl;
 	std::cout << "\n";
+}
+
+int	PhoneBook::check_index(std::string input)
+{
+	int	i;
+
+	i = -1;
+	while (input[++i])
+	{
+		if (isalpha(input[i]))
+			return (1);
+	}
+	return (0);
 }
