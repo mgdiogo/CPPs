@@ -6,22 +6,30 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:35 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 14:57:43 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:41:11 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook(void)
+{
+	return ;
+}
+
+PhoneBook::~PhoneBook(void)
+{
+	std::cout << "\n\nExiting PhoneBook!" << std::endl;
+	return ;
+}
+
 void	PhoneBook::addContact(void)
 {
 	int			i;
 	static int	max;
-	Contact	contact;
-
+	
 	i = max % 8;
-	contact = createContact(i);
-	this->contacts_[i] = contact;
-	std::cout << GREEN << "Contact added successfully!\n" << CLEAR << std::endl;
+	this->contacts_[i].add(i);
 	max++;
 }
 
@@ -32,37 +40,6 @@ void	PhoneBook::displayMenu(void)
 	std::cout << "Type EXIT to exit the PhoneBook\n" << std::endl;
 }
 
-Contact	PhoneBook::createContact(int i)
-{
-	long		phone_number;
-	std::string	first_name;
-	std::string	last_name;
-	std::string	nickname;
-	std::string	darkest_secret;
-
-	std::cout << BLUE << "Adding a new contact!\n" << CLEAR << std::endl;
-	std::cout << "Enter your first name -> ";
-	std::getline(std::cin, first_name);
-	std::cout << "Enter your last name -> ";
-	std::getline(std::cin, last_name);
-	std::cout << "Enter your nickname -> ";
-	std::getline(std::cin, nickname);
-	std::cout << "Enter your darkest secret -> ";
-	std::getline(std::cin, darkest_secret);
-	std::cout << "Enter your phone number -> ";
-	std::cin >> phone_number;
-	while (std::cin.fail())
-	{
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << BLUE << "Enter a valid phone number -> " << CLEAR;
-		std::cin >> phone_number;
-	}
-	std::cout << "\n";
-	std::cin.ignore();
-	Contact contact(i, phone_number, first_name, last_name, nickname, darkest_secret);
-	return (contact);
-}
 
 void	PhoneBook::searchContact(void)
 {
@@ -76,14 +53,16 @@ void	PhoneBook::searchContact(void)
 	displayContacts();
 	std::cout << "Choose an index -> ";
 	std::cin >> index;
-	std::cout << "\n";
 	while (std::cin.fail())
 	{
+		if (std::cin.eof())
+			return ;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << RED << "Enter a valid index -> " << CLEAR;
 		std::cin >> index;
 	}
+	std::cout << "\n";
 	if (index > 7 || index < 0)
 	{
 		std::cout << RED << "Index out of bounds!\n"<< CLEAR << std::endl;

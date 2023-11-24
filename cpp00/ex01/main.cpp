@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 10:40:08 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 15:00:26 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:09:33 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,13 @@ int	main(void)
 	std::cout << "Welcome to your PhoneBook!\n" << std::endl;
 	while (1)
 	{
-		phone_book.displayMenu();
-		std::cout << "PhoneBook -> ";
-		if (!std::getline(std::cin, action))
+		if (!std::cin.eof())
+		{
+			phone_book.displayMenu();
+			std::cout << "PhoneBook -> ";
+		}
+		std::getline(std::cin, action);
+		if (std::cin.eof())
 			return (0);
 		std::cout << "\n";
 		if (action == "ADD")

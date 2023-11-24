@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 23:07:42 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 12:06:51 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:18:08 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,28 @@
 #include <limits>
 #include <iomanip>
 #include <string>
+#include <cctype>
 
 class Contact
 {
 	private:
 		int			id_;
-		long		phone_number_;
+		std::string	phone_number_;
 		std::string	first_name_;
 		std::string	last_name_;
 		std::string	nickname_;
 		std::string	darkest_secret_;
 	public:
 		Contact(void);
-		Contact(int id, long phone_n, std::string f_name, std::string l_name, std::string nickname, std::string darkest_s);
+		~Contact(void);
+		void		add(int id);
 		int			getId(void);
-		long		getPhoneNumber(void);
+		std::string		getPhoneNumber(void);
 		std::string	getFirstName(void);
 		std::string	getLastName(void);
 		std::string	getNickname(void);
 		std::string	getDarkestSecret(void);
+		std::string	check_input(std::string input);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 22:29:31 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/24 14:04:44 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/24 17:36:32 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class PhoneBook
 	private:
 		Contact	contacts_[8];
 	public:
+		PhoneBook(void);
+		~PhoneBook(void);
 		void			addContact(void);
 		void			searchContact(void);
 		void			displayMenu(void);
@@ -26,7 +28,7 @@ class PhoneBook
 		void			displayContact(Contact contact);
 		void			formatContacts(Contact contact);
 		void			fixMsg(std::string msg);
-		Contact	createContact(int i);
+		void			createContact(int i);
 };
 
 #endif
