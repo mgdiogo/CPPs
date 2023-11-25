@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 10:38:01 by mpedroso          #+#    #+#             */
-/*   Updated: 2023/11/25 12:00:43 by mpedroso         ###   ########.fr       */
+/*   Updated: 2023/11/25 12:16:52 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,8 +130,9 @@ bool	Account::makeWithdrawal(int withdrawal)
 		std::cout << "withdrawal:refused" << std::endl;
 		return (false);
 	}
-	std::cout << "withdrawal:" << withdrawal << ";";
+	_totalAmount -= withdrawal;
 	this->_amount -= withdrawal;
+	std::cout << "withdrawal:" << withdrawal << ";";
 	std::cout << "amount:" << checkAmount() << ";";
 	this->_nbWithdrawals++;
 	std::cout << "nb_withdrawals:" << this->_nbWithdrawals << std::endl;
