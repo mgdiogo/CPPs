@@ -6,14 +6,14 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:55:18 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/18 22:55:39 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:18:54 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Base class default constructor called" << std::endl;
 	this->Name = "Bob";
 	this->hit_points = 100;
 	this->energy_points = 50;
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap(std::string name) {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Base class constructor called" << std::endl;
 	this->Name = name;
 	this->hit_points = 100;
 	this->energy_points = 50;
@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(std::string name) {
 }
 
 ClapTrap::ClapTrap(const ClapTrap &cpy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Base class copy constructor called" << std::endl;
 	this->Name = cpy.Name;
 	this->hit_points = cpy.hit_points;
 	this->energy_points = cpy.energy_points;

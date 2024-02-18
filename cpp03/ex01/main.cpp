@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:55:40 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/18 22:57:58 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:20:38 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,5 @@ int	main(void) {
 	//a.beRepaired(1);
 	//a.takeDamage(3);
 	b.attack("burro");
-	b.takeDamage(88);
-	b.beRepaired(55);
-	b.takeDamage(55);
 	b.guardGate();
 }

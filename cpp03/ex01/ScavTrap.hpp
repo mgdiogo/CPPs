@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 22:17:29 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/18 22:46:40 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:20:16 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ class ScavTrap : public ClapTrap {
 	public:
 		ScavTrap(std::string name);
 		~ScavTrap(void);
+		void attack(const std::string& target);
 		void guardGate();
 };
 
