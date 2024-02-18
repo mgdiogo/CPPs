@@ -6,24 +6,24 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:42:37 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/17 19:26:30 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/18 17:16:47 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed(void) {
-	std::cout << "Constructor was called" << std::endl;
+	std::cout << "Default constructor was called" << std::endl;
 	this->fixed_point = 0;
 }
 
 Fixed::Fixed(const int value) {
-	std::cout << "Constructor was called" << std::endl;
+	std::cout << "int constructor was called" << std::endl;
 	setRawBits(value);
 }
 
 Fixed::Fixed(const float value) {
-	std::cout << "Constructor was called" << std::endl;
+	std::cout << "float constructor was called" << std::endl;
 	this->fixed_point = roundf(value * (1 << this->fixed_bits));
 }
 
@@ -59,7 +59,7 @@ void Fixed::setRawBits(int const raw) {
 	this->fixed_point = raw << this->fixed_bits;
 }
 
-std::ostream& operator<<(std::ostream& stream, const Fixed& fixed)
-{
-	
+std::ostream& operator<<(std::ostream& stream, const Fixed& fixed) {
+	std::cout << fixed.toFloat();
+	return (stream);
 }
