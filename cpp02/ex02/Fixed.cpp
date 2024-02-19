@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:42:37 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/18 20:49:42 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/19 21:05:48 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed::Fixed(const float value) {
 
 Fixed::Fixed(const Fixed &cpy) {
 	//std::cout << "Copy constructor was called" << std::endl;
-	this->fixed_point = cpy.fixed_point;
+	*this = cpy;
 }
 
 Fixed& Fixed::operator=(const Fixed &cpy) {
