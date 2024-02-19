@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:55:18 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/18 22:06:37 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/19 21:51:10 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap(void) {
 }
 
 ClapTrap::ClapTrap(std::string name) {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called " << "[" << name << "]" << std::endl;
 	this->Name = name;
 	this->hit_points = 10;
 	this->energy_points = 10;
