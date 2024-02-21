@@ -2,7 +2,7 @@ NAME	=	string
 
 RM		=	rm -rf
 CXX		=	c++
-FLAGS	=	-Wall -Werror -Wextra -g -std=c++98
+CXXFLAGS	=	-Wall -Werror -Wextra -g -std=c++98
 SRC		=	main.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
@@ -10,7 +10,7 @@ OBJ		=	$(SRC:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			$(CXX) $(SRC) $(FLAGS) -o $(NAME)
+			$(CXX) $(SRC) $(CXXFLAGS) -o $(NAME)
 
 clean:
 			$(RM) $(OBJ)
