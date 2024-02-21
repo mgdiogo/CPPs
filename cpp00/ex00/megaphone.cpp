@@ -24,14 +24,15 @@ int	main(int argc, char **argv)
 		while (argv[++i])
 		{
 			j = -1;
+			if (argv[i] != NULL && i != 1)
+				std::cout << " ";
 			while (argv[i][++j])
 			{
 				argv[i][j] = toupper(argv[i][j]);
 				std::cout << argv[i][j];
 			}
-			std::cout << " ";
 		}
-		std::cout << "\n";
+		std::cout << std::endl;
 	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
