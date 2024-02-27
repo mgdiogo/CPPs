@@ -20,7 +20,7 @@ int	main(void)
 	n = 5;
 	zombie = zombieHorde(n, "jonas");
 	for (int i = 0; i < n; i++)
-		zombie->announce();
+		zombie[i].announce();
 	delete[](zombie);
 	return (0);
 }

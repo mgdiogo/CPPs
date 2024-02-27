@@ -12,22 +12,18 @@
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type): _type(type)
-{
+Weapon::Weapon(std::string type): _type(type) {
 	std::cout << "Weapon constructor called for type " << this->_type << std::endl;
 }
 
-Weapon::~Weapon(void)
-{
+Weapon::~Weapon(void) {
 	std::cout << "Weapon destructor called for type " << this->_type << std::endl;
 }
 
-const	std::string &Weapon::getType(void)
-{
+const	std::string &Weapon::getType(void) {
 	return (this->_type);
 }
 
-void	Weapon::setType(const std::string &type)
-{
+void	Weapon::setType(const std::string &type) {
 	this->_type = type;
 }
