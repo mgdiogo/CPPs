@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/18 20:55:40 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/20 11:17:26 by mpedroso         ###   ########.fr       */
+/*   Created: 2024/03/06 17:55:22 by mpedroso          #+#    #+#             */
+/*   Updated: 2024/03/06 18:08:18 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#pragma once
 
-int	main(void) {
-	DiamondTrap a("joao");
-	/*DiamondTrap b;
+#include <iostream>
 
-	b = a;
-	a.attack("joao");
-	b.attack("joao");
-	a.whoAmI();
-	b.whoAmI();*/
-}
+class Brain {
+	private:
+	public:
+		Brain(void);
+		Brain(const Brain &cpy);
+		Brain& operator=(const Brain &cpy);
+		~Brain(void);
+		std::string ideas[100];
+};

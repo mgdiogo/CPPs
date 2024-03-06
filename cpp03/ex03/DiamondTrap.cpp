@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 23:49:45 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/19 23:01:04 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/02/20 11:19:44 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &cpy) {
 }
 
 DiamondTrap::~DiamondTrap(void) {
-	std::cout << "DiamondTrap destructor was called with the name [" << ClapTrap::Name << "]" << std::endl;
+	std::cout << "DiamondTrap destructor was called with the name [" << this->Name << "]" << std::endl;
 }
 
 void DiamondTrap::attack(const std::string& target) {

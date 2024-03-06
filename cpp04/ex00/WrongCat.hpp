@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/18 20:55:40 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/02/20 11:17:26 by mpedroso         ###   ########.fr       */
+/*   Created: 2024/03/05 13:06:08 by mpedroso          #+#    #+#             */
+/*   Updated: 2024/03/05 13:06:40 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
+#pragma once
 
-int	main(void) {
-	DiamondTrap a("joao");
-	/*DiamondTrap b;
+#include "WrongAnimal.hpp"
 
-	b = a;
-	a.attack("joao");
-	b.attack("joao");
-	a.whoAmI();
-	b.whoAmI();*/
-}
+class WrongCat : public WrongAnimal {
+	public:
+		WrongCat(void);
+		WrongCat(const WrongCat &cpy);
+		WrongCat& operator=(const WrongCat &cpy);
+		~WrongCat(void);
+		void makeSound(void) const;
+};
