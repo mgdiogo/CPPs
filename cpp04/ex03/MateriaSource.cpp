@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 18:40:32 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/03/10 19:55:44 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/03/11 20:09:08 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 MateriaSource::MateriaSource(void) {
 	for (int i = 0; i < 4; i++)
 		this->inv[i] = NULL;
+	std::cout << "MateriaSource created" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource &cpy) {
@@ -25,11 +26,15 @@ MateriaSource::MateriaSource(const MateriaSource &cpy) {
 		else
 			this->inv[i] = NULL;
 	}
+	std::cout << "MateriaSource copy created" << std::endl;
 }
 
 MateriaSource::~MateriaSource(void) {
-	for (int i = 0; i < 4 && this->inv[i]; i++)
-		delete this->inv[i];
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->inv[i])
+			delete this->inv[i];
+	}
 	std::cout << "MateriaSource destroyed" << std::endl;
 }
 
@@ -46,6 +51,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &cpy) {
 				this->inv[i] = NULL;
 		}
 	}
+	std::cout << "MateriaSource assignment operator called" << std::endl;
 	return (*this);
 }
 
