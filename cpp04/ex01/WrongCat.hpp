@@ -13,8 +13,11 @@
 #pragma once
 
 #include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
 class WrongCat : public WrongAnimal {
+	private:
+		Brain *brain;
 	public:
 		WrongCat(void);
 		WrongCat(const WrongCat &cpy);

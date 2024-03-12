@@ -13,18 +13,27 @@
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat(void) {
+	this->brain = new Brain();
+	*this->brain->ideas = "i am a cat";
 	this->_type = "WrongCat";
 	std::cout << "WrongCat default constructor called" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &cpy) : WrongAnimal() {
+	this->brain = new Brain();
+	*this->brain->ideas = *cpy.brain->ideas;
 	this->_type = cpy._type;
 	std::cout << "WrongCat copy constructor called" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat &cpy) {
 	if (this != &cpy)
+	{
+		delete this->brain;
+		this->brain = new Brain();
+		*this->brain->ideas = *cpy.brain->ideas;
 		this->_type = cpy._type;
+	}
 	std::cout << "WrongCat assignment operator called" << std::endl;
 	return (*this);
 }
