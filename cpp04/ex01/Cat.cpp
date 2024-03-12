@@ -21,14 +21,19 @@ Cat::Cat(void) {
 
 Cat::Cat(const Cat &cpy) : Animal() {
 	this->brain = new Brain();
-	*this->brain->ideas = "i am a cat";
+	*this->brain->ideas = *cpy.brain->ideas;
 	this->_type = cpy._type;
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat &cpy) {
 	if (this != &cpy)
+	{
+		delete this->brain;
+		this->brain = new Brain();
+		*this->brain->ideas = *cpy.brain->ideas;
 		this->_type = cpy._type;
+	}
 	std::cout << "Cat assignment operator called" << std::endl;
 	return (*this);
 }
