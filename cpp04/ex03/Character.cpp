@@ -61,6 +61,12 @@ Character& Character::operator=(const Character &cpy) {
 				this->inv[i] = NULL;
 		}
 	}
+	std::cout << "Source object inventory adresses:" << std::endl;
+	for (int i = 0; i < 4; i++)
+		std::cout << cpy.inv[i] << std::endl;
+	std::cout << "Destiny object inventory adresses:" << std::endl;
+	for (int i = 0; i < 4; i++)
+		std::cout << this->inv[i] << std::endl;
 	std::cout << "Character assignment operator called" << std::endl;
 	return (*this);
 }
