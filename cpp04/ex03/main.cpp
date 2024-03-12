@@ -13,8 +13,6 @@
 #include "AMateria.hpp"
 #include "Character.hpp"
 #include "Cure.hpp"
-#include "ICharacter.hpp"
-#include "IMateriaSource.hpp"
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
 
@@ -55,7 +53,9 @@ int	main(void)
 		boneco->equip(tmp);
 		boneco->equip(tmp2);
 
-		Character dumb = *boneco;
+		Character dumb;
+
+		dumb = *boneco;
 
 		boneco->use(0, dumb);
 		boneco->use(1, dumb);
@@ -74,8 +74,8 @@ int	main(void)
 		dumb.use(4, *boneco);
 
 		delete boneco;
-		delete tmp2;
 		delete tmp;
+		delete tmp2;
 		delete isrc;
 	}
 	return (0);
