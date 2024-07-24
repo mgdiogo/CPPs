@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:09:57 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/03/26 18:12:00 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/07/24 21:15:50 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(void)
 			std::cout << test << std::endl;
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	{
@@ -40,7 +40,7 @@ int	main(void)
 			std::cout << test << std::endl;
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 }

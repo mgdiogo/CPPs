@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:09:57 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/03/26 16:49:28 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/07/24 21:15:16 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 			john.decrement();
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	{
@@ -33,7 +33,7 @@ int	main(void)
 			andew.increment();
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 }

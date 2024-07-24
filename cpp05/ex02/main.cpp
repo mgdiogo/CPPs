@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:09:57 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 16:00:59 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/07/24 21:16:10 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(void)
 			std::cout << shrubberyForm << std::endl;
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 
@@ -56,7 +56,7 @@ int	main(void)
 			std::cout << robotomyForm << std::endl;
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 	
@@ -77,7 +77,7 @@ int	main(void)
 			std::cout << presidentialForm << std::endl;
 		}
 		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 	}
 }
