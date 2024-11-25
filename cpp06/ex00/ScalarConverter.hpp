@@ -6,11 +6,12 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 17:03:04 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/08/15 18:55:03 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/11/25 18:14:51 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef SCALARCONVERTER_HPP
+# define SCALARCONVERTER_HPP
 
 #include <iostream>
 #include <cctype>
@@ -30,3 +31,5 @@ class ScalarConverter {
 		static void convertDouble(std::string literal);
 		//static void checkDataType(std::string literal);
 };
+
+#endif

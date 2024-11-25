@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:37:33 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/11/25 18:09:47 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/11/25 19:33:02 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ int main(void) {
 		std::cout << "Pointers match!" << std::endl;
 	else
 		std::cout << "Something went wrong!" << std::endl;
+	return (0);
 }
