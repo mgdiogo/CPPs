@@ -1,26 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   fncs.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 14:52:35 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/05 19:40:36 by mpedroso         ###   ########.fr       */
+/*   Created: 2024/12/05 19:41:17 by mpedroso          #+#    #+#             */
+/*   Updated: 2024/12/05 19:41:33 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#ifndef FNCS_HPP
+# define FNCS_HPP
+# include <iostream>
 
-void increment(int &n) {
-	n++;
+template <class T>
+
+void swap(T& a, T& b) {
+	T temp = a;
+	a = b;
+	b = temp;
 }
 
-int main(void) {
-	int arr[5] = {0, 1, 2, 3 ,4};
+template <class T>
 
-	iter(arr, 5, increment);
-	for (int i = 0; i < 5; ++i)
-		std::cout << arr[i] << std::endl;
-	return (0);
+T min(T a, T b) {
+	if (a > b)
+		return (b);
+	else if (a < b)
+		return (a);
+	return (b);
 }
+
+template <class T>
+
+T max(T a, T b) {
+	if (a > b)
+		return (a);
+	else if (a < b)
+		return (b);
+	return (b);
+}
+
+#endif

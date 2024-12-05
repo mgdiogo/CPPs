@@ -6,39 +6,11 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:28:09 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/11/26 14:50:32 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:41:05 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-template <class T>
-
-void swap(T& a, T& b) {
-	T temp = a;
-	a = b;
-	b = temp;
-}
-
-template <class T>
-
-T min(T a, T b) {
-	if (a > b)
-		return (b);
-	else if (a < b)
-		return (a);
-	return (b);
-}
-
-template <class T>
-
-T max(T a, T b) {
-	if (a > b)
-		return (a);
-	else if (a < b)
-		return (b);
-	return (b);
-}
+#include "fncs.hpp"
 
 int main(void) {
 	int a = 2;
