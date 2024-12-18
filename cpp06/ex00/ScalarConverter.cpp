@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 17:27:19 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/13 20:14:12 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:39:16 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void ScalarConverter::convert(std::string literal) {
 }
 
 int ScalarConverter::checkDataType(std::string literal) {
+	if (literal[literal.size() - 1] == '.')
+		return (0);
 	if (literal.length() == 1 && !isdigit(literal[0]))
 		return (1);
 	if (literal.find_first_not_of("+-0123456789") == std::string::npos)
