@@ -34,13 +34,28 @@ AForm *Intern::makeForm(std::string form_name, std::string target) {
 	AForm *form;
 	
 	form = NULL;
-	if (form_name == "robotomy request")
-		form = new RobotomyRequestForm(target);
-	else if (form_name == "presidential pardon")
-		form = new PresidentialPardonForm(target);
-	else if (form_name == "shrubbery creation")
-		form = new ShrubberyCreationForm(target);
-	else
-		throw FormNotCreated();
+
+	int j;
+
+	std::string forms[] = {"robotomy request", "presidential pardon", "shrubbery creation"};
+
+	for (int i = 0; i < 3; ++i) {
+		if (form_name == forms[i])
+			j = i + 1;
+	}
+
+	switch (j) {
+		case 1:
+			form = new RobotomyRequestForm(target);
+			break ;
+		case 2:
+			form = new PresidentialPardonForm(target);
+			break ;
+		case 3:
+			form = new ShrubberyCreationForm(target);
+			break ;
+		default:
+			throw Intern::FormNotCreated();
+	}
 	return (form);
 }
