@@ -18,7 +18,23 @@ int	main(void)
 	{
 		try {
 			Bureaucrat john("john", 150);
-			Form test("test", 149, 149);
+			Form test("test", 149, 151);
+			
+			std::cout << test << std::endl;
+			
+			john.signForm(test);
+			std::cout << test << std::endl;
+		}
+		catch (std::exception &e) {
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	{
+		
+		try {
+			std::cout << "-------------------" << std::endl;
+			Bureaucrat john("john", 150);
+			Form test("test", 149, 150);
 			
 			std::cout << test << std::endl;
 			
@@ -31,6 +47,7 @@ int	main(void)
 	}
 	{
 		try {
+			std::cout << "-------------------" << std::endl;
 			Bureaucrat andrew("andrew", 1);
 			Form test("test", 149, 149);
 			

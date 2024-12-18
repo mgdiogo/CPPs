@@ -12,17 +12,18 @@
 
 #include "Form.hpp"
 
-Form::Form(void) : _name("default"), _sign_grade(150), _exec_grade(150), _signed(false) {
-	std::cout << "Form default constructor called" << std::endl;
-}
+Form::Form(void) : _name("default"), _sign_grade(150), _exec_grade(150), _signed(false) {}
 
 Form::Form(std::string name, int sign, int exec) : _name(name), _sign_grade(sign), _exec_grade(exec), _signed(false) {
-	std::cout << "Form constructor called" << std::endl;
+	if (sign < 1 || exec < 1) {
+		throw Form::FormTooHighException();
+	}
+	if (sign > 150 || exec > 150) {
+		throw Form::FormTooLowException();
+	}
 }
 
-Form::Form(const Form &cpy) : _name(cpy._name), _sign_grade(cpy._sign_grade), _exec_grade(cpy._exec_grade), _signed(cpy._signed) {
-	std::cout << "Form copy constructor called" << std::endl;
-}
+Form::Form(const Form &cpy) : _name(cpy._name), _sign_grade(cpy._sign_grade), _exec_grade(cpy._exec_grade), _signed(cpy._signed) {}
 
 Form& Form::operator=(const Form &cpy) {
 	if (this != &cpy)
@@ -30,9 +31,7 @@ Form& Form::operator=(const Form &cpy) {
 	return (*this);
 }
 
-Form::~Form(void) {
-	std::cout << "Form destructor called" << std::endl;
-}
+Form::~Form(void) {}
 
 const char *Form::GradeTooHighException::what(void) const throw(){
 	return (" the bureaucrat's grade is higher than required");
@@ -40,6 +39,14 @@ const char *Form::GradeTooHighException::what(void) const throw(){
 
 const char *Form::GradeTooLowException::what(void) const throw(){
 	return (" the bureaucrat's grade is lower than required");
+}
+
+const char *Form::FormTooHighException::what(void) const throw(){
+	return ("Form initialized with invalid grade, execute/sign grade can't go below 1");
+}
+
+const char *Form::FormTooLowException::what(void) const throw(){
+	return ("Form initialized with invalid grade, execute/sign grade can't go above 150");
 }
 
 const std::string Form::getName(void) const {

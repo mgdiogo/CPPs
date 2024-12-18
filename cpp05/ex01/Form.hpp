@@ -37,6 +37,14 @@ class Form {
 			public: 
 			virtual const char *what(void) const throw();
 		};
+		class FormTooHighException : public std::exception {
+		public: 
+			virtual const char *what(void) const throw();
+		};
+		class FormTooLowException : public std::exception {
+			public: 
+			virtual const char *what(void) const throw();
+		};
 		const std::string getName(void) const;
 		int getSignGrade(void) const;
 		int getExecGrade(void) const;
