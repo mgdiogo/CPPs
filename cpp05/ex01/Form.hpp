@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:11:36 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/18 13:39:41 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:46:12 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ class Form {
 		~Form(void);
 		Form& operator=(const Form &cpy);
 		class GradeTooHighException : public std::exception {
-		public: 
-			virtual const char *what(void) const throw();
+			public: 
+				virtual const char *what(void) const throw();
 		};
 		class GradeTooLowException : public std::exception {
-		public: 
-			virtual const char *what(void) const throw();
+			public: 
+				virtual const char *what(void) const throw();
 		};
 		class FormTooHighException : public std::exception {
-		public: 
-			virtual const char *what(void) const throw();
+			public: 
+				virtual const char *what(void) const throw();
 		};
 		class FormTooLowException : public std::exception {
-		public: 
-			virtual const char *what(void) const throw();
+			public: 
+				virtual const char *what(void) const throw();
 		};
 		const std::string getName(void) const;
 		int getSignGrade(void) const;
