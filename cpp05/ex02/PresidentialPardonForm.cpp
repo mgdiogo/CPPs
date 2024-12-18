@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:46:12 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 16:02:36 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:50:02 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 	return (*this);
 }
 
-PresidentialPardonForm::~PresidentialPardonForm() {
-	std::cout << "Presidential Form destructor called" << std::endl;
-}
+PresidentialPardonForm::~PresidentialPardonForm() {}
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const {
 	AForm::execute(executor);

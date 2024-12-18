@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:19:21 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 15:42:41 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:51:02 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &c
 	return (*this);
 }
 
-RobotomyRequestForm::~RobotomyRequestForm() {
-	std::cout << "Robotomy Form destructor called" << std::endl;
-}
+RobotomyRequestForm::~RobotomyRequestForm() {}
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const {
 	int	chance;

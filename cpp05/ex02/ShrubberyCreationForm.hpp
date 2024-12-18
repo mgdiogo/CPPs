@@ -6,14 +6,14 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:08:59 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 15:18:34 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:09:56 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "AForm.hpp"
-#include <fstream>
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
+# include "AForm.hpp"
+# include <fstream>
 
 class ShrubberyCreationForm : public AForm {
 	private:
@@ -27,3 +27,5 @@ class ShrubberyCreationForm : public AForm {
 		ShrubberyCreationForm& operator=(ShrubberyCreationForm const &cpy);
 		void execute(Bureaucrat const &executor) const;
 };
+
+#endif

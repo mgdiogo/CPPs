@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:14:41 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 15:03:36 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:50:14 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-ShrubberyCreationForm::~ShrubberyCreationForm() {
-	std::cout << "Shrubbery Form destructor called" << std::endl;
-}
+ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
 	AForm::execute(executor);

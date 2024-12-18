@@ -6,15 +6,15 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:11:54 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 15:34:02 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:09:18 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "AForm.hpp"
-#include <cstdlib>
-#include <ctime>
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
+# include "AForm.hpp"
+# include <cstdlib>
+# include <ctime>
 
 class RobotomyRequestForm : public AForm {
 	private:
@@ -28,3 +28,5 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm& operator=(const RobotomyRequestForm &cpy);
 		void execute(Bureaucrat const &executor) const;
 };
+
+#endif

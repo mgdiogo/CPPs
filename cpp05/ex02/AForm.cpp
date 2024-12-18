@@ -12,17 +12,11 @@
 
 #include "AForm.hpp"
 
-AForm::AForm(void) : _name("default"), _sign_grade(150), _exec_grade(150), _signed(false) {
-	std::cout << "AForm default constructor called" << std::endl;
-}
+AForm::AForm(void) : _name("default"), _sign_grade(150), _exec_grade(150), _signed(false) {}
 
-AForm::AForm(std::string name, int sign, int exec) : _name(name), _sign_grade(sign), _exec_grade(exec), _signed(false) {
-	std::cout << "AForm constructor called" << std::endl;
-}
+AForm::AForm(std::string name, int sign, int exec) : _name(name), _sign_grade(sign), _exec_grade(exec), _signed(false) {}
 
-AForm::AForm(const AForm &cpy) : _name(cpy._name), _sign_grade(cpy._sign_grade), _exec_grade(cpy._exec_grade), _signed(cpy._signed) {
-	std::cout << "AForm copy constructor called" << std::endl;
-}
+AForm::AForm(const AForm &cpy) : _name(cpy._name), _sign_grade(cpy._sign_grade), _exec_grade(cpy._exec_grade), _signed(cpy._signed) {}
 
 AForm& AForm::operator=(const AForm &cpy) {
 	if (this != &cpy)
@@ -30,9 +24,7 @@ AForm& AForm::operator=(const AForm &cpy) {
 	return (*this);
 }
 
-AForm::~AForm(void) {
-	std::cout << "AForm destructor called" << std::endl;
-}
+AForm::~AForm(void) {}
 
 const char *AForm::GradeTooHighException::what(void) const throw(){
 	return (" the bureaucrat's grade is higher than required.");

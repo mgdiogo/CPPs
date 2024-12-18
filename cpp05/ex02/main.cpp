@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:09:57 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/24 21:16:10 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:15:42 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	main(void)
 	{
 		try
 		{
+			std::cout << "-------------------" << std::endl;
 			Bureaucrat migas("migas", 43);
 			RobotomyRequestForm robotomyForm("clank");
 
@@ -63,6 +64,7 @@ int	main(void)
 	{
 		try
 		{
+			std::cout << "-------------------" << std::endl;
 			Bureaucrat migas("migas", 20);
 			PresidentialPardonForm presidentialForm("lela");
 

@@ -6,16 +6,16 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 19:34:08 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/24 20:50:00 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:19:23 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "AForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#ifndef INTERN_HPP
+# define INTERN_HPP
+# include "AForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "ShrubberyCreationForm.hpp"
 
 class Intern {
 	public:
@@ -29,3 +29,5 @@ class Intern {
 				virtual const char *what(void) const throw();
 		};
 };
+
+#endif

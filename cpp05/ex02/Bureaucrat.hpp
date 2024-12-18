@@ -6,14 +6,14 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:09:59 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/02 13:57:34 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:07:24 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "AForm.hpp"
-#include <iostream>
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
+# include "AForm.hpp"
+# include <iostream>
 
 class AForm;
 
@@ -44,3 +44,5 @@ class Bureaucrat {
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat& b);
+
+#endif

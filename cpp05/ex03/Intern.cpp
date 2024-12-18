@@ -6,15 +6,13 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 19:51:30 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/07/24 21:12:24 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 14:26:29 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
-Intern::Intern(void) {
-	std::cout << "Intern constructor was called" << std::endl;
-}
+Intern::Intern(void) {}
 
 Intern::Intern(const Intern &cpy) {
 	*this = cpy;
@@ -26,9 +24,7 @@ Intern& Intern::operator=(const Intern &cpy) {
 	return (*this);
 }
 
-Intern::~Intern(void) {
-	std::cout << "Intern destructor called" << std::endl;
-}
+Intern::~Intern(void) {}
 
 const char *Intern::FormNotCreated::what(void) const throw() {
 	return ("Invalid form name, form was not created.");

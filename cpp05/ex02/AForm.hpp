@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "Bureaucrat.hpp"
-#include <iostream>
+#ifndef AFORM_HPP
+# define AFORM_HPP
+# include "Bureaucrat.hpp"
+# include <iostream>
 
 class Bureaucrat;
 
@@ -54,3 +54,5 @@ class AForm {
 };
 
 std::ostream& operator<<(std::ostream &os, const AForm& f);
+
+#endif
