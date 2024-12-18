@@ -6,14 +6,14 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:11:36 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/03/26 17:57:45 by mpedroso         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:39:41 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include "Bureaucrat.hpp"
-#include <iostream>
+#ifndef FORM_HPP
+# define FORM_HPP
+# include "Bureaucrat.hpp"
+# include <iostream>
 
 class Bureaucrat;
 
@@ -34,7 +34,7 @@ class Form {
 			virtual const char *what(void) const throw();
 		};
 		class GradeTooLowException : public std::exception {
-			public: 
+		public: 
 			virtual const char *what(void) const throw();
 		};
 		class FormTooHighException : public std::exception {
@@ -42,7 +42,7 @@ class Form {
 			virtual const char *what(void) const throw();
 		};
 		class FormTooLowException : public std::exception {
-			public: 
+		public: 
 			virtual const char *what(void) const throw();
 		};
 		const std::string getName(void) const;
@@ -53,3 +53,5 @@ class Form {
 };
 
 std::ostream& operator<<(std::ostream &os, const Form& f);
+
+#endif
