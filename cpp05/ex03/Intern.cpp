@@ -35,10 +35,9 @@ AForm *Intern::makeForm(std::string form_name, std::string target) {
 	
 	form = NULL;
 
-	int j;
+	int j = 0;
 
 	std::string forms[] = {"robotomy request", "presidential pardon", "shrubbery creation"};
-
 	for (int i = 0; i < 3; ++i) {
 		if (form_name == forms[i])
 			j = i + 1;
