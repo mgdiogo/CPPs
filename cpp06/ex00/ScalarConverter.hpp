@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 17:03:04 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/13 19:20:36 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/02/06 14:06:39 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 # define SCALARCONVERTER_HPP
 # include <iostream>
 # include <cctype>
-# include <string>
+# include <string.h>
 # include <sstream>
 # include <iomanip>
+# include <limits>
+# include <cstdio>
 
 class ScalarConverter {
-	public:
+	private:
 		ScalarConverter();
+	public:
 		ScalarConverter(const ScalarConverter &cpy);
 		ScalarConverter& operator=(const ScalarConverter &cpy);
 		~ScalarConverter();
@@ -29,7 +32,6 @@ class ScalarConverter {
 		static void convertInt(std::string literal);
 		static void convertFloat(std::string literal);
 		static void convertDouble(std::string literal);
-		static int checkDataType(std::string literal);
 };
 
 #endif
