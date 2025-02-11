@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 19:04:47 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/11/25 19:55:24 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:39:38 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Base* generate(void) {
 	
 	std::srand(time(0));
 	random = std::rand() % 3;
-	//std::cout << random << std::endl;
 
 	if (random == 0)
 		return new A();
