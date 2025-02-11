@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 17:27:19 by mpedroso          #+#    #+#             */
-/*   Updated: 2025/02/11 13:36:28 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/02/11 17:18:53 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void ScalarConverter::convertInt(std::string literal) {
 	}
 	else if ((ss >> d) && (ss.peek() == EOF || (ss >> c && c == 'f' && ss.peek() == EOF))) {
 		int i = static_cast<int>(d);
-		if (i >= std::numeric_limits<int>::min() && i <= std::numeric_limits<int>::max())
+		if (d >= std::numeric_limits<int>::min() && d <= std::numeric_limits<int>::max())
 			std::cout << "int: " << i << std::endl;
 		else
 			std::cout << "int: impossible" << std::endl;
