@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 17:13:04 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/11/25 18:14:27 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:56:25 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,8 @@
 # define DATA_HPP
 # include <iostream>
 
-class Data {
-	private:
-		int _data_int;
-	public:
-		Data();
-		Data(const Data &cpy);
-		Data& operator=(const Data &cpy);
-		~Data();
+struct Data {
+	std::string value;
 };
 
 #endif
