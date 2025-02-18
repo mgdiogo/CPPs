@@ -17,9 +17,14 @@
 template <class T>
 
 void iter(T *ptr, size_t len, void (*f)(T&)) {
-	for (size_t i = 0; i < len; ++i) {
+	for (size_t i = 0; i < len; ++i)
 		f(ptr[i]);
-	}
+}
+
+template <class T>
+
+void increment(T &n) {
+	n++;
 }
 
 #endif

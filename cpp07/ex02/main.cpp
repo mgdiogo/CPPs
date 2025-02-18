@@ -29,7 +29,6 @@ int main(void) {
 		}
 		std::cout << " ";
 	}
-	std::cout << std::endl;
 	std::cout << "Array B -> ";
 	for (unsigned int i = 0; i < b.size(); ++i) {
 		if (i == 0)
@@ -43,7 +42,6 @@ int main(void) {
 	}
 	std::cout << "Change array b values: " <<std::endl;
 	b.setValues();
-	
 	std::cout << "Array A -> ";
 	for (unsigned int i = 0; i < a.size(); ++i) {
 		if (i == 0)
@@ -55,7 +53,6 @@ int main(void) {
 		}
 		std::cout << " ";
 	}
-	std::cout << std::endl;
 	std::cout << "Array B -> ";
 	for (unsigned int i = 0; i < b.size(); ++i) {
 		if (i == 0)
@@ -67,7 +64,7 @@ int main(void) {
 		}
 		std::cout << " ";
 	}
-	
+	std::cout << std::endl;
 	std::cout << "** Out of bounds test **" << std::endl;
 	try {
 		std::cout << a[9] << std::endl;

@@ -43,9 +43,8 @@ template <class T>
 Array<T>::Array(unsigned int n) {
 	_size = n;
 	arr = new T[_size];
-	for (unsigned int i = 0; i < n; ++i) {
+	for (unsigned int i = 0; i < n; ++i)
 		arr[i] = T();
-	}
 }
 
 template <class T>
@@ -55,10 +54,24 @@ Array<T>::Array(const Array &cpy) {
 	this->arr = NULL;
 	if (cpy.arr) {
 		arr = new T[cpy.size()];
-		for (unsigned int i = 0; i < cpy.size(); ++i) {
+		for (unsigned int i = 0; i < cpy.size(); ++i)
 			this->arr[i] = cpy.arr[i];
+	}
+}
+
+template <class T>
+
+T& Array<T>::operator=(const Array &cpy) {
+	if (this != &cpy) {
+		_size = cpy.size();
+		this->arr = NULL;
+		if (cpy.arr) {
+			arr = new T[cpy.size()];
+			for (unsigned int i = 0; i < cpy.size(); ++i)
+				this->arr[i] = cpy.arr[i];
 		}
 	}
+	return (*this);
 }
 
 template <class T>

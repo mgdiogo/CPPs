@@ -12,15 +12,35 @@
 
 #include "iter.hpp"
 
-void increment(int &n) {
-	n++;
-}
-
 int main(void) {
-	int arr[5] = {0, 1, 2, 3 ,4};
+	int arr_i[5] = {0, 1, 2, 3 ,4};
+	double arr_d[5] = {'a', 'b', 'c', 'd', 'e'};
+	char arr_c[5] = {'a', 'b', 'c', 'd', 'e'};
 
-	iter(arr, 5, increment);
-	for (int i = 0; i < 5; ++i)
-		std::cout << arr[i] << std::endl;
+	iter(arr_i, 5, increment);
+	iter(arr_d, 5, increment);
+	iter(arr_c, 5, increment);
+
+	for (int i = 0; i < 5; ++i) {
+		if (i == 0)
+			std::cout << "{ ";
+		std::cout << arr_i[i] << " ";
+		if (i == 4)
+			std::cout << "}" << std::endl;
+	}
+	for (int i = 0; i < 5; ++i) {
+		if (i == 0)
+			std::cout << "{ ";
+		std::cout << arr_d[i] << " ";
+		if (i == 4)
+			std::cout << "}" << std::endl;
+	}
+	for (int i = 0; i < 5; ++i) {
+		if (i == 0)
+			std::cout << "{ ";
+		std::cout << arr_c[i] << " ";
+		if (i == 4)
+			std::cout << "}" << std::endl;
+	}
 	return (0);
 }
