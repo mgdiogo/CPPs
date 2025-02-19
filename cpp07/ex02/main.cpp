@@ -17,6 +17,9 @@ int main(void) {
 	std::cout << "Set array values below: " << std::endl;
 	a.setValues();
 	Array<int> b(a);
+	const Array<int> c(a);
+	Array<int> empty;
+
 	
 	std::cout << "Array A -> ";
 	for (unsigned int i = 0; i < a.size(); ++i) {
@@ -72,5 +75,19 @@ int main(void) {
 	catch (std::out_of_range &e) {
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << std::endl;
+	std::cout << "Array C -> ";
+	for (unsigned int i = 0; i < c.size(); ++i) {
+		if (i == 0)
+			std::cout << "{ ";
+		std::cout << c[i];
+		if (i == c.size() - 1) {
+			std::cout << " }" << std::endl;
+			break ;
+		}
+		std::cout << " ";
+	}
+
+	std::cout << "Empty array size -> " << empty.size() << std::endl;
 	return (0);
 }

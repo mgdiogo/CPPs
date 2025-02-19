@@ -25,6 +25,7 @@ class Array {
 		Array(unsigned int n);
 		Array(const Array &cpy);
 		T& operator[](unsigned int i);
+		const T& operator[](unsigned int i) const;
 		T& operator=(const Array &cpy);
 		~Array();
 		unsigned int size(void) const;
@@ -97,6 +98,15 @@ unsigned int Array<T>::size(void) const {
 template <class T>
 
 T& Array<T>::operator[](unsigned int i){
+	if (i > size()) {
+		throw std::out_of_range("Tried to access an invalid index inside the array!");
+	}
+	return (this->arr[i]);
+}
+
+template <class T>
+
+const T& Array<T>::operator[](unsigned int i) const {
 	if (i > size()) {
 		throw std::out_of_range("Tried to access an invalid index inside the array!");
 	}
