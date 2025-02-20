@@ -12,15 +12,16 @@
 
 #include "Array.hpp"
 
+
 int main(void) {
 	Array<int> a(5);
-	std::cout << "Set array values below: " << std::endl;
-	a.setValues();
+
+	for (unsigned int i = 0; i < a.size(); ++i)
+		a[i] = i;
 	Array<int> b(a);
 	const Array<int> c(a);
 	Array<int> empty;
 
-	
 	std::cout << "Array A -> ";
 	for (unsigned int i = 0; i < a.size(); ++i) {
 		if (i == 0)
@@ -43,8 +44,12 @@ int main(void) {
 		}
 		std::cout << " ";
 	}
-	std::cout << "Change array b values: " <<std::endl;
-	b.setValues();
+	std::cout << "Array B after changes" <<std::endl;
+	int j = 0;
+	for (unsigned int i = 5; i > 0; --i) {
+		b[j] = i - 1;
+		j++;
+	}
 	std::cout << "Array A -> ";
 	for (unsigned int i = 0; i < a.size(); ++i) {
 		if (i == 0)
