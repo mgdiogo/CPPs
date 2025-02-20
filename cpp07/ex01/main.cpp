@@ -17,30 +17,8 @@ int main(void) {
 	double arr_d[5] = {'a', 'b', 'c', 'd', 'e'};
 	char arr_c[5] = {'a', 'b', 'c', 'd', 'e'};
 
-	iter(arr_i, 5, increment);
-	iter(arr_d, 5, increment);
-	iter(arr_c, 5, increment);
-
-	for (int i = 0; i < 5; ++i) {
-		if (i == 0)
-			std::cout << "{ ";
-		std::cout << arr_i[i] << " ";
-		if (i == 4)
-			std::cout << "}" << std::endl;
-	}
-	for (int i = 0; i < 5; ++i) {
-		if (i == 0)
-			std::cout << "{ ";
-		std::cout << arr_d[i] << " ";
-		if (i == 4)
-			std::cout << "}" << std::endl;
-	}
-	for (int i = 0; i < 5; ++i) {
-		if (i == 0)
-			std::cout << "{ ";
-		std::cout << arr_c[i] << " ";
-		if (i == 4)
-			std::cout << "}" << std::endl;
-	}
+	iter(arr_i, 5, print<int>);
+	iter(arr_d, 5, print<double>);
+	iter(arr_c, 5, print<char>);
 	return (0);
 }

@@ -23,8 +23,15 @@ void iter(T *ptr, size_t len, void (*f)(T&)) {
 
 template <class T>
 
-void increment(T &n) {
-	n++;
+void iter(T *ptr, size_t len, void (*f)(const T&)) {
+ 	for (size_t i = 0; i < len; ++i)
+ 		f(ptr[i]);
+}
+
+template <class T>
+
+void print(T &x) {
+	std::cout << x << std::endl;
 }
 
 #endif
