@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 21:38:38 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/08 19:56:48 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:30:36 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 int main(void) {
 	try {
 		Span container(5);
+		container.addNumber(11);
+		container.addNumber(21);
+		container.addNumber(6);
 		container.addNumber(1);
-		container.addNumber(4);
-		container.addNumber(7);
-		container.addNumber(10);
-		container.addNumber(13);
+		container.addNumber(16);
 		
 		std::cout << "Longest span -> " << container.longestSpan() << std::endl;
 		std::cout << "shortest span -> " << container.shortestSpan() << std::endl;

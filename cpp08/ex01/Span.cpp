@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 20:34:59 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/08 19:46:23 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:28:22 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,10 @@ int Span::longestSpan(void) {
 int Span::shortestSpan(void) {
 	if (this->container.size() <= 1)
 		throw std::logic_error("Not enough elements inside the vector to calculate shortest span!");
-	int difference;
-	int shortest;
-	shortest = std::numeric_limits<int>::max();
-	for (size_t i = 0; i < this->container.size(); ++i) {
-		if (container[i + 1]) {	
-			difference = container[i + 1] - container[i];
-			if (difference < shortest)
-				shortest = difference;
-		}
-	}
-	
-	return (shortest);
+	std::vector<int> temp;
+	std::vector<int> diff;
+	std::copy(this->container.begin(), this->container.end(), std::back_inserter(temp));
+	std::sort(temp.begin(), temp.end());
+	std::adjacent_difference(temp.begin(), temp.end(), std::back_inserter(diff));
+	return (*std::min_element(++diff.begin(), diff.end()));
 }

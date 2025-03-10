@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 20:29:47 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/08 19:21:10 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:20:45 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <iterator>
 # include <algorithm>
 # include <limits>
+# include <numeric> 
 
 class Span {
 	private:
