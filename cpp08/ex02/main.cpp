@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 18:06:55 by mpedroso          #+#    #+#             */
-/*   Updated: 2024/12/10 19:24:03 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/10 14:42:22 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ int main(void) {
 
 	std::cout << "Elements inside the stack using iterator" << std::endl;
 	std::cout << "-------------------------" << std::endl;
-	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); it++) {
+	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); it++)
 		std::cout <<  "[" << *it << "]" << std::endl;
-	}
 	std::cout << "-------------------------" << std::endl;
 	std::cout << "Stack size -> " << mstack.size() << std::endl;
 	std::cout << "Stack top element -> " << mstack.top() << std::endl;
@@ -34,9 +33,8 @@ int main(void) {
 	std::cout << "Stack top element after pop -> " << mstack.top() << std::endl;
 	std::cout << "Elements inside the stack after pop" << std::endl;
 	std::cout << "-------------------------" << std::endl;
-	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); it++) {
+	for (MutantStack<int>::iterator it = mstack.begin(); it != mstack.end(); it++)
 		std::cout <<  "[" << *it << "]" << std::endl;
-	}
 	std::cout << "-------------------------" << std::endl;
 	mstack.push(12);
 	std::cout << "First element in the stack -> " << *b << std::endl;
