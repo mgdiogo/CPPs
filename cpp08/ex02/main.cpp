@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 18:06:55 by mpedroso          #+#    #+#             */
-/*   Updated: 2025/03/10 14:42:22 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:47:33 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int main(void) {
 	mstack.push(6);
 	mstack.push(9);
 	mstack.push(12);
-	
 
 	std::cout << "Elements inside the stack using iterator" << std::endl;
 	std::cout << "-------------------------" << std::endl;
@@ -40,20 +39,6 @@ int main(void) {
 	std::cout << "First element in the stack -> " << *b << std::endl;
 	b++;
 	std::cout << "Second element in the stack -> " << *b << std::endl;
-	std::cout << std::endl;
-	std::cout << "Using the copy constructor from the std::stack" <<std::endl;
-	std::cout << "itself and checking that it copies the contents" << std::endl;
-	std::cout << "of our stack without problems" << std::endl;
 	std::stack<int> s(mstack);
-	std::cout << "-------------------------" << std::endl;
-	std::cout << "[" << s.top() << "]" << std::endl;
-	s.pop();
-	std::cout << "[" << s.top() << "]" << std::endl;
-	s.pop();
-	std::cout << "[" << s.top() << "]" << std::endl;
-	s.pop();
-	std::cout << "[" << s.top() << "]" << std::endl;
-	std::cout << "-------------------------" << std::endl;
-	
 	return (0);
 }
