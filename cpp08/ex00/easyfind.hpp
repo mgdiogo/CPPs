@@ -14,7 +14,6 @@
 # define EASYFIND_HPP
 # include <algorithm>
 # include <iostream>
-# include <iterator>
 # include <vector>
 
 template <class T>
