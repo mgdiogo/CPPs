@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 15:36:56 by mpedroso          #+#    #+#             */
-/*   Updated: 2025/03/31 16:23:26 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/03/31 16:44:32 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ int main(int argc, char **argv) {
 			std::cout << e.what() << std::endl;
 		}
 	}
+	else
+		std::cout << "Usage -> ./RPN \"expression\"" << std::endl;
 }
