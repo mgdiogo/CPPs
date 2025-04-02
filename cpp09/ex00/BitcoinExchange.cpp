@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 17:38:22 by mpedroso          #+#    #+#             */
-/*   Updated: 2025/03/31 16:40:30 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/04/02 12:53:03 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,24 @@ BitcoinExchange::~BitcoinExchange() {}
 void BitcoinExchange::parseFile(std::ifstream &fileName) {
 	std::string nextline;
 	while (std::getline(fileName, nextline)) {
-		float value;
-		std::string date;
-		std::string valueStr;
-		std::istringstream iss(nextline);
 		if (nextline == "")
 			continue;
-		std::getline(iss, date, ',');
-		std::getline(iss, valueStr);
+		std::string date, valueStr;
+        std::stringstream iss(nextline);
+
+        if (!std::getline(iss, date, '|') || !std::getline(iss, valueStr)) {
+            std::cout << "Error: bad input -> " << nextline << std::endl;
+            continue;
+        }
+		date = trim(date);
+		valueStr = trim(valueStr);
 		std::istringstream valueStream(valueStr);
-		valueStream >> value;
-		if (!checkDate(date))
+        float value;
+        if (!(valueStream >> value) || !valueStream.eof()) {
+            std::cout << "Error: bad input -> " << valueStr << std::endl;
+            continue;
+		}
+        else if (!checkDate(date))
 			std::cout << "Error: bad input -> " << date << std::endl;
 		else if (value > 1000)
 			std::cout << "Error: number too large -> " << value << std::endl;
@@ -103,4 +110,12 @@ void BitcoinExchange::processValue(std::string date, float value) {
 	}
 	finalValue = it->second * value;
 	std::cout << std::fixed << std::setprecision(2) << finalValue << std::endl;
+}
+
+std::string BitcoinExchange::trim(const std::string &str) {
+    size_t first = str.find_first_not_of(" \t");
+    if (first == std::string::npos) return ""; // All spaces
+
+    size_t last = str.find_last_not_of(" \t");
+    return str.substr(first, (last - first + 1));
 }

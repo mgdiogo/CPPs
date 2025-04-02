@@ -6,7 +6,7 @@
 /*   By: mpedroso <mpedroso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 13:44:04 by mpedroso          #+#    #+#             */
-/*   Updated: 2025/04/01 23:03:55 by mpedroso         ###   ########.fr       */
+/*   Updated: 2025/04/02 13:09:58 by mpedroso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int main(int argc, char **argv) {
 			if (isSorted(pmerge.getVecSeq()))
 				throw std::invalid_argument("Error: sequence is already sorted");
 			pmerge.printVecBefore();
+			std::cout << std::endl;
 			pmerge.printDequeBefore();
 			std::clock_t start_v = std::clock();
 			pmerge.mergeSort(pmerge.getVecSeq());
@@ -66,6 +67,7 @@ int main(int argc, char **argv) {
 			double elapsed_d = static_cast<double>(end_d - start_d) / CLOCKS_PER_SEC * 1000000;
 			std::cout << std::endl;
 			pmerge.printVecAfter();
+			std::cout << std::endl;
 			pmerge.printDequeAfter();
 			std::cout << "\nTime to process range of " << pmerge.getVecSeq().size() << " elements with std::vector -> " << elapsed_v << " us";
 			std::cout << "\nTime to process range of " << pmerge.getDequeSeq().size() << " elements with std::deque -> " << elapsed_d << " us" << std::endl;
